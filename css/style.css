@@ -1,0 +1,297 @@
+:root {
+  --bodyBg: #d6eaf8;
+  --primaryColor: #003366;
+  --secondaryColors: #80add7;
+  --titleColor: #3374ff;
+  --white: #fff;
+  --black: #000;
+  --clamp1: clamp(1.8rem, 2.5vw, 2.8rem);
+
+  /* Font Sizes */
+  --clamp12: clamp(10px, 0.625vw, 12px);
+  --clamp13: clamp(10px, 0.677vw, 13px);
+  --clamp14: clamp(12px, 0.729vw, 14px);
+  --clamp15: clamp(13px, 0.781vw, 15px);
+  --clamp16: clamp(14px, 0.833vw, 16px);
+  --clamp18: clamp(14px, 0.937vw, 18px);
+  --clamp20: clamp(16px, 1.041vw, 20px);
+  --clamp21: clamp(16px, 1.093vw, 21px);
+  --clamp22: clamp(16px, 1.145vw, 22px);
+  --clamp24: clamp(16px, 1.25vw, 24px);
+  --clamp26: clamp(18px, 1.354vw, 26px);
+  --clamp27: clamp(18px, 1.406vw, 27px);
+  --clamp28: clamp(18px, 1.458vw, 28px);
+  --clamp30: clamp(20px, 1.562vw, 30px);
+  --clamp32: clamp(20px, 1.666vw, 32px);
+  --clamp34: clamp(20px, 1.77vw, 34px);
+  --clamp35: clamp(20px, 1.822vw, 35px);
+  --clamp36: clamp(22px, 1.875vw, 36px);
+  --clamp38: clamp(22px, 1.979vw, 38px);
+  --clamp40: clamp(24px, 2.187vw, 40px);
+  --clamp42: clamp(24px, 2.187vw, 42px);
+  --clamp44: clamp(24px, 2.291vw, 44px);
+  --clamp45: clamp(26px, 2.3vw, 45px);
+  --clamp46: clamp(26px, 2.3vw, 46px);
+  --clamp48: clamp(28px, 2.5vw, 48px);
+  --clamp50: clamp(28px, 2.604vw, 50px);
+  --clamp52: clamp(28px, 2.708vw, 52px);
+  --clamp54: clamp(28px, 2.812vw, 54px);
+  --clamp55: clamp(28px, 2.864vw, 55px);
+  --clamp56: clamp(28px, 2.916vw, 56px);
+  --clamp58: clamp(28px, 3.02vw, 58px);
+  --clamp60: clamp(30px, 3.125vw, 60px);
+  --clamp62: clamp(30px, 3.229vw, 62px);
+  --clamp64: clamp(30px, 3.333vw, 64px);
+  --clamp65: clamp(30px, 3.385vw, 65px);
+  --clamp66: clamp(32px, 3.437vw, 66px);
+  --clamp68: clamp(32px, 3.541vw, 68px);
+  --clamp70: clamp(32px, 3.645vw, 70px);
+  --clamp72: clamp(35px, 3.72vw, 72px);
+  --clamp74: clamp(35px, 3.854vw, 74px);
+  --clamp75: clamp(35px, 3.906vw, 75px);
+  --clamp76: clamp(35px, 3.958vw, 75px);
+  --clamp78: clamp(35px, 4.062vw, 78px);
+  --clamp80: clamp(35px, 4.166vw, 80px);
+  --clamp82: clamp(35px, 4.27vw, 82px);
+  --clamp84: clamp(38px, 4.375vw, 84px);
+  --clamp100: clamp(38px, 5.2vw, 100px);
+  --clamp120: clamp(40px, 6.25vw, 120px);
+  --clamp150: clamp(40px, 7.81vw, 150px);
+}
+body {
+  background-color: var(--bodyBg);
+  overflow-x: hidden;
+  font-family: "Fira Sans", sans-serif;
+}
+.orbFont {
+  font-family: "Orbitron", sans-serif;
+  color: #33a3ff;
+}
+h1 {
+  font-size: var(--clamp32);
+}
+
+header h1 {
+  color: var(--primaryColor);
+  font-weight: 700;
+  text-align: center;
+}
+header .navbar-toggler {
+  border: 0;
+}
+header .navbar-toggler:focus {
+  box-shadow: none;
+}
+header .navbar-toggler .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+.headerNav {
+  background-color: var(--primaryColor);
+  color: var(--white);
+}
+.headerNav a.navbar-brand {
+  color: var(--white);
+  font-size: var(--clamp22);
+  font-weight: 700;
+}
+.headerNav a.navbar-brand:hover {
+  color: var(--white);
+}
+.navbar-nav ul {
+  background-color: var(--primaryColor);
+  list-style: none;
+  padding-left: 0px;
+  border: 0;
+}
+.navbar-nav li {
+  position: relative;
+}
+.navbar-nav li a {
+  color: var(--white);
+}
+.navbar-nav li a:hover {
+  color: var(--primaryColor);
+}
+.navbar-nav li a.nav-link:hover,
+.navbar-nav li a.nav-link.active {
+  color: var(--secondaryColors);
+}
+.navbar-nav li ul li > ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0px;
+}
+.navbar-nav li:hover > ul {
+  display: block;
+}
+.navbar-nav li ul li a.active:hover,
+.navbar-nav li ul li a:hover,
+.navbar-nav li ul li a.active {
+  background-color: var(--white);
+  color: var(--primaryColor);
+}
+
+/* Navigation Responsive */
+@media (max-width: 1199.98px) {
+  .navbar-nav li ul li > ul,
+  .navbar-nav li ul {
+    position: inherit;
+    text-align: center;
+    left: inherit;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 50px;
+    z-index: 9;
+    background: var(--primaryColor);
+    left: 0px;
+    right: 0px;
+    text-align: center;
+  }
+}
+
+.followMe {
+  background-color: var(--secondaryColors);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.followMe a {
+  display: inline-flex;
+  margin: 0 1rem;
+}
+.followMe svg {
+  width: 20px;
+  height: 20px;
+}
+.followMe svg path {
+  fill: var(--white);
+}
+.copyRight {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  text-align: center;
+  padding: 16px 0;
+}
+.copyRight svg {
+  width: 18px;
+  height: 18px;
+}
+.copyRight svg path {
+  fill: var(--white);
+}
+.copyRight a {
+  display: inline-flex;
+  margin: 0 5px;
+  text-decoration: none;
+  color: var(--white);
+  padding-top: 5px;
+}
+
+.contentBlock {
+  background-color: var(--white);
+}
+
+.contentBlock h2 {
+  font-size: var(--clamp32);
+  font-weight: 700;
+  color: var(--titleColor);
+}
+.contentBlock h3 {
+  font-size: var(--clamp28);
+  font-weight: 700;
+  color: #33a3ff;
+}
+.contentBlock h4 {
+  font-size: var(--clamp24);
+  font-weight: 700;
+  color: var(--black);
+}
+
+.contentBlock p {
+  color: var(--black);
+  font-size: var(--clamp16);
+  font-weight: 400;
+}
+.contentBlock ul li {
+  color: var(--black);
+  font-size: var(--clamp16);
+  font-weight: 400;
+}
+.contentBlock h3.crimred {
+  color: crimson;
+}
+
+.cfDesign label {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #222220;
+  display: block;
+  margin-bottom: 12px;
+}
+.cfDesign .form-field {
+  border: 1px solid #cdcdcd;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 36px;
+  color: #222220;
+  font-weight: 400;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  white-space: pre-wrap;
+  border-radius: 5px;
+  background-color: white;
+}
+.cfDesign sup{
+  color:crimson;
+}
+.cfDesign .error{
+  border-color:crimson;
+}
+.btn--big--round--primary {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 42px;
+  background-color: #0983b7;
+  border-radius: 25px;
+  position: relative;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--white);
+  border: 0;
+}
+
+.contactInfo{
+  margin-top: 20px;
+  padding: 20px 0px;
+  box-shadow: 14px 17px 17px 0 rgb(107 124 147 / 11%);
+  border-radius: 10px;
+  display: flex;
+}
+.contactInfo .infoImg{
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+  background-color: #0983b7;
+  border-radius: 50%;
+  position: relative;
+  left: 14px;
+  transition: .4s ease;
+}
+.contactInfo .infoImg img {
+  margin: 14px;
+  padding-top: 2px;
+}
+.contactInfo .infoContent {
+  top: 7px;
+  text-align: left;
+  position: relative;
+  left: 20px;
+}
